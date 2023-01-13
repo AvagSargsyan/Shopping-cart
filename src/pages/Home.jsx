@@ -1,9 +1,12 @@
+import { Link } from 'react-router-dom';
 import { StyledHome } from './styles/Home.style';
 
 const Home = () => {
   return (
     <StyledHome>
-      <h1>Home page</h1>
+      <p>Best online store of the year</p>
+      <h2>Make your fashion look more attractive</h2>
+      <Link to="/products">Shop now</Link>
     </StyledHome>
   );
 };

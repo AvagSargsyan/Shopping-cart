@@ -6,6 +6,7 @@ const StyledHeader = styled.header`
   align-items: center;
   justify-content: space-around;
   padding: 1.6rem 0;
+  max-height: 10%;
 
   h1 {
     a {

@@ -13,7 +13,8 @@ const theme = {
     dark: '#222',
     light: '#eee',
     darkerLight: '#ddd',
-    primary: 'cyan'
+    lighterDark: '#333',
+    primary: '#cc9349'
   }
 }
 
