@@ -9,7 +9,7 @@ const GlobalStyles = createGlobalStyle`
   
   body {
     color: ${({ theme }) => theme.colors.font};
-    background: ${({ theme }) => theme.colors.background};
+    background: ${({ theme }) => theme.colors.light};
     font-family: 'Montserrat', sans-serif;
     height: 100vh;
 

@@ -1,9 +1,26 @@
 import { StyledProducts } from './styles/Products.style';
+import useFetch from '../hooks/useFetch';
+import ProductCard from '../components/ProductCard';
+import filterProducts from '../utilities/filterProducts';
 
 const Products = () => {
+  const {
+    data: products,
+    loading,
+    error,
+  } = useFetch('https://fakestoreapi.com/products');
+
+  if (error) {
+    console.log(error);
+  }
+
   return (
     <StyledProducts>
-      <h1>Products page</h1>
+      {loading && <div>Loading...</div>}
+      {products &&
+        filterProducts(products).map((product, i) => (
+          <ProductCard key={i} product={product} />
+        ))}
     </StyledProducts>
   );
 };

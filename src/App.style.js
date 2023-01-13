@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const AppContainer = styled.div`
-  background: silver;
+  background: ${({ theme }) => theme.colors.darkerLight};
   height: 100%;
 `
 
