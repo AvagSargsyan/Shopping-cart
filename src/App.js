@@ -10,8 +10,10 @@ import { ThemeProvider } from 'styled-components';
 
 const theme = {
   colors: {
-    font: '#222',
-    background: '#eee'
+    dark: '#222',
+    light: '#eee',
+    darkerLight: '#ddd',
+    primary: 'cyan'
   }
 }
 
