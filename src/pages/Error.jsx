@@ -1,9 +1,11 @@
+import { StyledError } from './styles/Error.style';
+
 const Error = () => {
   return (
-    <div className="error-message">
-      <h1 className="msg-title">Page not found</h1>
-      <p className="message">Make sure the address is correct.</p>
-    </div>
+    <StyledError>
+      <h1>Page not found</h1>
+      <p>Make sure the address is correct.</p>
+    </StyledError>
   );
 };
 

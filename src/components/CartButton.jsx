@@ -1,10 +1,11 @@
 import { FaShoppingCart } from 'react-icons/fa';
+import { StyledCartButton } from './styles/CartButton.style';
 
 const CartButton = () => {
   return (
-    <button className="cart-button">
+    <StyledCartButton>
       <FaShoppingCart />
-    </button>
+    </StyledCartButton>
   );
 };
 

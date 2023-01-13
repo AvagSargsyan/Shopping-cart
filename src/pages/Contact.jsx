@@ -1,8 +1,10 @@
+import { StyledContact } from './styles/Contact.style';
+
 const Contact = () => {
   return (
-    <div className="contact-page">
+    <StyledContact>
       <h1>Contact page</h1>
-    </div>
+    </StyledContact>
   );
 };
 

@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
 import CartButton from './CartButton';
+import { StyledHeader } from './styles/Header.style';
 
-const Navbar = () => {
+const Header = () => {
   return (
-    <div className="navbar">
+    <StyledHeader>
       <h1>
         <Link to="/">FakeStore</Link>
       </h1>
@@ -13,8 +14,8 @@ const Navbar = () => {
         <Link to="/contact">Contact</Link>
         <CartButton />
       </nav>
-    </div>
+    </StyledHeader>
   );
 };
 
-export default Navbar;
+export default Header;
