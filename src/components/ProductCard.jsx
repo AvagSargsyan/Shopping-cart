@@ -1,18 +1,13 @@
+import { StyledProductCard } from './styles/ProductCard.style';
+
 const ProductCard = ({ product }) => {
   return (
-    <div>
-      <img
-        src={product.image}
-        alt={product.title}
-        style={{
-          height: '200px',
-          width: '200px',
-        }}
-      />
+    <StyledProductCard>
+      <img src={product.image} alt={product.title} />
       <div>{product.title}</div>
-      <div>${product.price}</div>
+      <span>${product.price}</span>
       <button>Add to cart</button>
-    </div>
+    </StyledProductCard>
   );
 };
 

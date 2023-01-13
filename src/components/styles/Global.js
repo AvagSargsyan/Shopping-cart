@@ -11,10 +11,9 @@ const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.colors.font};
     background: ${({ theme }) => theme.colors.light};
     font-family: 'Montserrat', sans-serif;
-    height: 100vh;
-
+    
     #root {
-      height: 100%;
+      height: 100vh;
     }
   }
 `
