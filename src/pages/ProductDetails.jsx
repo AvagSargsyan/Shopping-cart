@@ -14,6 +14,7 @@ import {
 } from './styles/ProductDetails.style';
 import { FaShoppingCart, FaPlus, FaMinus } from 'react-icons/fa';
 import { StyledButton } from '../components/styles/ProductCard.style';
+import Loader from '../components/Loader';
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -32,7 +33,7 @@ const ProductDetails = () => {
 
   return (
     <StyledProductDetails>
-      {loading && <div>Loading...</div>}
+      {loading && <Loader />}
       {product && (
         <StyledProductDetails>
           <StyledButton onClick={() => navigate('/products')}>

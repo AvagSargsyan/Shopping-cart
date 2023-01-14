@@ -7,7 +7,10 @@ export const StyledError = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-size: 1.2rem;
+  text-align: center;
   h1 {
+    margin: 20vh 0 1rem 0;
     text-transform: uppercase;
   }
 `
