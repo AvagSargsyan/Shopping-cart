@@ -15,6 +15,7 @@ const StyledProductCard = styled.div`
   transform: scale(1.05);
   transition: 0.15s ease-in-out;
   gap: 0.8rem;
+  animation: grow 0.6s;
 
   &:hover {
     transform: scale(1.1);

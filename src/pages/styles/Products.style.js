@@ -10,7 +10,6 @@ const StyledProducts = styled.div`
   gap: 5rem;
   justify-items: center;
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-
 `
 
 export {

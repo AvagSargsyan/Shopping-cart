@@ -9,7 +9,7 @@ const StyledAbout = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-
+  
   div {
     border-radius: 8px;
     margin: 0 2rem 2rem 0;
@@ -18,6 +18,7 @@ const StyledAbout = styled.div`
     width: 45%;
     animation: fold;
     transition: 0.4s ease-in-out;
+    animation: grow 0.7s;
     
     h2 {
       font-size: 3.5rem;

@@ -4,6 +4,10 @@ const StyledProductDetails = styled.div`
   background: ${({ theme }) => theme.colors.darkerLight};
   color: ${({ theme }) => theme.colors.dark};
   padding: 0.8rem;
+  
+  button {
+    animation: grow 0.6s;
+  }
 `
 
 const StyledProduct = styled.div`
@@ -14,6 +18,7 @@ const StyledProduct = styled.div`
   flex-wrap: wrap;
   gap: 1.5rem;
   justify-content: space-evenly;
+  animation: fade-left 0.6s;
 
   img {
     width: 30vw;
@@ -21,6 +26,7 @@ const StyledProduct = styled.div`
     max-width: 450px;
     height: auto;
     border-radius: 8px;
+    animation: fade-right 0.6s;
   }
 
   h2 {
@@ -32,7 +38,6 @@ const StyledProduct = styled.div`
     margin-top: 1.5rem;
     line-height: 1.4rem;
   }
-
 `
 
 const StyledInfo = styled.div`

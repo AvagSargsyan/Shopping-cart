@@ -13,7 +13,7 @@ const StyledHome = styled.div`
   flex-direction: column;
   align-items: flex-start;
   gap: 2rem;
-
+  
   p {
     color: ${({ theme }) => theme.colors.dark};
     text-transform: uppercase;
@@ -21,12 +21,14 @@ const StyledHome = styled.div`
     font-size: 1.1rem;
     width: 50%;
     letter-spacing: 4px;
+    animation: fade-right 1s;
   }
 
   h2 {
     width: 50%;
     font-size: 4rem;
     color: ${({ theme }) => theme.colors.primary};
+    animation: fade-left 1s;
   }
 
   a {
@@ -39,6 +41,7 @@ const StyledHome = styled.div`
     font-size: 1.2rem;
     cursor: pointer;
     transition: 0.1s ease-in-out;
+    animation: grow 1s;
 
     &:hover {
       background: ${({ theme }) => theme.colors.lighterDark};

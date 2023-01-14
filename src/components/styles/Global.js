@@ -16,6 +16,51 @@ const GlobalStyles = createGlobalStyle`
       height: 100vh;
     }
   }
+
+  /* Animations */
+  @keyframes grow {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-right {
+    from {
+      transform: translateX(-10px);
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-left {
+    from {
+      transform: translateX(10px);
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes cover {
+    from {
+      transform: translate(100%);
+      opacity: 0.5;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
 `
 
 export default GlobalStyles;
