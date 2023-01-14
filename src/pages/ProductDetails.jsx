@@ -1,10 +1,19 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import useFetch from '../hooks/useFetch';
 import {
+  StyledAddSection,
+  StyledCategory,
+  StyledPrice,
+  StyledOldPrice,
   StyledProduct,
   StyledProductDetails,
+  StyledPriceSection,
+  StyledInfo,
+  StyledAddButton,
+  StyledCountButton,
 } from './styles/ProductDetails.style';
-import { FaShoppingCart } from 'react-icons/fa';
+import { FaShoppingCart, FaPlus, FaMinus } from 'react-icons/fa';
+import { StyledButton } from '../components/styles/ProductCard.style';
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -26,20 +35,35 @@ const ProductDetails = () => {
       {loading && <div>Loading...</div>}
       {product && (
         <StyledProductDetails>
-          <button onClick={() => navigate('/products')}>Go back</button>
+          <StyledButton onClick={() => navigate('/products')}>
+            Go back
+          </StyledButton>
           <StyledProduct>
             <img src={product.image} alt={product.title} />
-            <span>{product.category}</span>
-            <div>{product.title}</div>
-            <div>{product.description}</div>
-            <div>${product.price}</div>
-            <div>
-              <button>-</button>0<button>+</button>
-              <button>
-                <FaShoppingCart />
-                Add to cart
-              </button>
-            </div>
+            <StyledInfo>
+              <StyledCategory>{product.category}</StyledCategory>
+              <h2>{product.title}</h2>
+              <p>{product.description}</p>
+              <StyledPriceSection>
+                <StyledPrice>${product.price}</StyledPrice>
+                <StyledOldPrice>
+                  ${Math.floor(product.price) + 10 + '.99'}
+                </StyledOldPrice>
+              </StyledPriceSection>
+              <StyledAddSection>
+                <StyledCountButton>
+                  <FaMinus />
+                </StyledCountButton>
+                <span>0</span>
+                <StyledCountButton>
+                  <FaPlus />
+                </StyledCountButton>
+                <StyledAddButton>
+                  <FaShoppingCart />
+                  Add to cart
+                </StyledAddButton>
+              </StyledAddSection>
+            </StyledInfo>
           </StyledProduct>
         </StyledProductDetails>
       )}

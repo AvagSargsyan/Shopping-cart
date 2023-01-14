@@ -40,23 +40,25 @@ const StyledProductCard = styled.div`
   span {
   }
 
-  button {
-    align-self: stretch;
-    border: none;
-    border-radius: 8px;
-    padding: 0.8rem;
-    background: ${({ theme }) => theme.colors.dark};
-    color: ${({ theme }) => theme.colors.light};
-    font-weight: 700;
-    font-size: 1.1rem;
-    cursor: pointer;
+`
 
-    &:hover {
-      background: ${({ theme }) => theme.colors.lighterDark};
-    }
+const StyledButton = styled.button`
+  align-self: stretch;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem;
+  background: ${({ theme }) => theme.colors.dark};
+  color: ${({ theme }) => theme.colors.light};
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+
+  &:hover {
+    background: ${({ theme }) => theme.colors.lighterDark};
   }
 `
 
 export {
-  StyledProductCard
+  StyledProductCard,
+  StyledButton
 }
