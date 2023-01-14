@@ -4,7 +4,6 @@ const StyledProductDetails = styled.div`
   background: ${({ theme }) => theme.colors.darkerLight};
   color: ${({ theme }) => theme.colors.dark};
   padding: 0.8rem;
-
 `
 
 const StyledProduct = styled.div`

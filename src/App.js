@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './pages/Home';
 import Products from './pages/Products';
-import Contact from './pages/Contact';
+import About from './pages/About';
 import Error from './pages/Error';
 import { AppContainer } from './App.style';
 import GlobalStyles from './components/styles/Global';
@@ -29,7 +29,7 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/about" element={<About />} />
             <Route path="/products" element={<Products />} />
             <Route path="/products/:id" element={<ProductDetails />} />
             <Route path="*" element={<Error />} />
