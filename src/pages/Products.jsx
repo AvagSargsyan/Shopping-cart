@@ -18,8 +18,8 @@ const Products = () => {
     <StyledProducts>
       {loading && <div>Loading...</div>}
       {products &&
-        filterProducts(products).map((product, i) => (
-          <ProductCard key={i} product={product} />
+        filterProducts(products).map((product) => (
+          <ProductCard key={product.id} product={product} />
         ))}
     </StyledProducts>
   );

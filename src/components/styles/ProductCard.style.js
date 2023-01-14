@@ -27,9 +27,10 @@ const StyledProductCard = styled.div`
     min-width: 150px;
   }
 
-  div {
+  a {
     font-weight: 700;
-    cursor: pointer;
+    text-decoration: none;
+    color: ${({ theme }) => theme.colors.dark};
 
     &:hover {
       color: ${({ theme }) => theme.colors.lighterDark};

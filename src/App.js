@@ -7,6 +7,7 @@ import Error from './pages/Error';
 import { AppContainer } from './App.style';
 import GlobalStyles from './components/styles/Global';
 import { ThemeProvider } from 'styled-components';
+import ProductDetails from './pages/ProductDetails';
 
 const theme = {
   colors: {
@@ -27,9 +28,10 @@ function App() {
           <GlobalStyles />
           <Header />
           <Routes>
-            <Route path="" element={<Home />} />
-            <Route path="/products" element={<Products />} />
+            <Route path="/" element={<Home />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/products/:id" element={<ProductDetails />} />
             <Route path="*" element={<Error />} />
           </Routes>
         </Router>
