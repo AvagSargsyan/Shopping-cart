@@ -63,6 +63,7 @@ const StyledPriceSection = styled.div`
 `
 
 const StyledPrice = styled.div`
+  color: ${({ theme }) => theme.colors.dark};
   font-size: 1.6rem;
   font-weight: 600;
 `
@@ -123,6 +124,7 @@ const StyledCountButton = styled.button`
 
   &:hover {
     transform: scale(1.1);
+    color: ${({ theme }) => theme.colors.primary} !important;
   }
 
 `

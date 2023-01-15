@@ -1,9 +1,9 @@
 import { FaShoppingCart } from 'react-icons/fa';
 import { StyledCartButton } from './styles/CartButton.style';
 
-const CartButton = () => {
+const CartButton = ({ toggleCart }) => {
   return (
-    <StyledCartButton>
+    <StyledCartButton onClick={toggleCart}>
       <FaShoppingCart />
     </StyledCartButton>
   );
