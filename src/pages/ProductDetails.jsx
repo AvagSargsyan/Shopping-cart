@@ -18,6 +18,7 @@ import Loader from '../components/Loader';
 
 const ProductDetails = () => {
   const { id } = useParams();
+  let navigate = useNavigate();
 
   const {
     data: product,
@@ -28,8 +29,6 @@ const ProductDetails = () => {
   if (error) {
     console.log(error);
   }
-
-  let navigate = useNavigate();
 
   return (
     <StyledProductDetails>
@@ -48,7 +47,7 @@ const ProductDetails = () => {
               <StyledPriceSection>
                 <StyledPrice>${product.price}</StyledPrice>
                 <StyledOldPrice>
-                  ${Math.floor(product.price) + 10 + '.99'}
+                  ${(product.price + 10).toFixed(2)}
                 </StyledOldPrice>
               </StyledPriceSection>
               <StyledAddSection>
@@ -68,6 +67,7 @@ const ProductDetails = () => {
           </StyledProduct>
         </StyledProductDetails>
       )}
+      {error && <div>Something went wrong! Please reload the page.</div>}
     </StyledProductDetails>
   );
 };

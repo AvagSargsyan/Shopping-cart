@@ -14,12 +14,12 @@ const StyledCart = styled.div`
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   gap: 1rem;
-
-
+  
   h2 {
     color: ${({ theme }) => theme.colors.dark};
     margin-bottom: 1rem;
     font-size: 2rem;
+    text-align: center;
   }
   
 `

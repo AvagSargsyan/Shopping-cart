@@ -24,6 +24,6 @@ export default function useFetch(url) {
     )()
   }, [url])
 
-  return { data, error, loading }
+  return { data, loading, error }
 
 }
