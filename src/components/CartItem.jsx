@@ -4,7 +4,7 @@ import { StyledCountButton } from '../pages/styles/ProductDetails.style';
 import shortenText from '../utilities/shortenText';
 import { StyledCartItem } from './styles/CartItem.style';
 
-const CartItem = ({ product }) => {
+const CartItem = ({ product, incrementCount, decrementCount }) => {
   return (
     <StyledCartItem>
       <img src={product.image} alt={product.title} />
@@ -14,11 +14,11 @@ const CartItem = ({ product }) => {
         </Link>
         <p>${product.price}</p>
         <div>
-          <StyledCountButton>
+          <StyledCountButton onClick={() => decrementCount(product.id)}>
             <FaMinus />
           </StyledCountButton>
-          <span>0</span>
-          <StyledCountButton>
+          <span>{product.count}</span>
+          <StyledCountButton onClick={() => incrementCount(product.id)}>
             <FaPlus />
           </StyledCountButton>
         </div>

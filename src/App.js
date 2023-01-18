@@ -27,7 +27,7 @@ function App() {
   const initialState = {
     displayCart: true,
     loading: true,
-    error: '',
+    error: false,
     products: [],
   }
 
@@ -41,16 +41,39 @@ function App() {
     });
   }
 
+  const incrementCount = (productId) => {
+    dispatch({
+      type: ACTIONS.INCREMENT_COUNT,
+      payload: {
+        id: productId,
+      }
+    });
+  }
+
+  const decrementCount = (productId) => {
+    dispatch({
+      type: ACTIONS.DECREMENT_COUNT,
+      payload: {
+        id: productId,
+      }
+    });
+  }
+
   return (
     <ThemeProvider theme={theme} >
       <AppContainer>
         <Router>
           <GlobalStyles />
-          <Header displayCart={state.displayCart} products={state.products} toggleCart={toggleCart} />
+          <Header displayCart={state.displayCart} products={state.products} toggleCart={toggleCart} incrementCount={incrementCount} decrementCount={decrementCount} />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/products" element={<Products products={state.products} loading={state.loading} error={state.error} />} />
+            <Route path="/products" element={<Products
+              incrementCount={incrementCount}
+              products={state.products}
+              loading={state.loading}
+              error={state.error} />}
+            />
             <Route path="/products/:id" element={<ProductDetails />} />
             <Route path="*" element={<Error />} />
           </Routes>

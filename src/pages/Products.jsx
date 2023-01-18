@@ -1,9 +1,8 @@
 import { StyledProducts } from './styles/Products.style';
 import ProductCard from '../components/ProductCard';
-import filterProducts from '../utilities/filterProducts';
 import Loader from '../components/Loader';
 
-const Products = ({ products, error, loading }) => {
+const Products = ({ incrementCount, products, loading, error }) => {
   if (error) {
     console.log(error);
   }
@@ -12,8 +11,12 @@ const Products = ({ products, error, loading }) => {
     <StyledProducts>
       {loading && <Loader />}
       {products &&
-        filterProducts(products).map((product) => (
-          <ProductCard key={product.id} product={product} />
+        products.map((product) => (
+          <ProductCard
+            key={product.id}
+            incrementCount={incrementCount}
+            product={product}
+          />
         ))}
       {error && <div>Something went wrong! Please reload the page.</div>}
     </StyledProducts>

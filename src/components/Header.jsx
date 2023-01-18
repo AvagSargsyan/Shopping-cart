@@ -3,7 +3,13 @@ import Cart from './Cart';
 import CartButton from './CartButton';
 import { StyledHeader, StyledNavbar } from './styles/Header.style';
 
-const Header = ({ displayCart, products, toggleCart }) => {
+const Header = ({
+  displayCart,
+  products,
+  toggleCart,
+  incrementCount,
+  decrementCount,
+}) => {
   return (
     <StyledHeader>
       <h1>
@@ -14,7 +20,14 @@ const Header = ({ displayCart, products, toggleCart }) => {
         <Link to="/products">Products</Link>
         <Link to="/about">About</Link>
         <CartButton toggleCart={toggleCart} />
-        {displayCart && <Cart products={products} toggleCart={toggleCart} />}
+        {displayCart && (
+          <Cart
+            products={products}
+            toggleCart={toggleCart}
+            incrementCount={incrementCount}
+            decrementCount={decrementCount}
+          />
+        )}
       </StyledNavbar>
     </StyledHeader>
   );
