@@ -14,6 +14,7 @@ const Cart = ({
   incrementCount,
   decrementCount,
   resetCount,
+  emptyCart,
 }) => {
   const cartItems = products.filter((product) => product.count > 0);
   const totalCartPrice = cartItems.reduce(
@@ -36,6 +37,7 @@ const Cart = ({
               incrementCount={incrementCount}
               decrementCount={decrementCount}
               resetCount={resetCount}
+              toggleCart={toggleCart}
             />
           ))
         ) : (
@@ -43,7 +45,9 @@ const Cart = ({
         )}
       </StyledItemsSection>
       <StyledPrice>Total: ${totalCartPrice.toFixed(2)}</StyledPrice>
-      <StyledButton>Empty Cart</StyledButton>
+      <StyledButton onClick={() => cartItems.length > 0 && emptyCart()}>
+        Empty Cart
+      </StyledButton>
     </StyledCart>
   );
 };

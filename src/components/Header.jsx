@@ -10,6 +10,7 @@ const Header = ({
   incrementCount,
   decrementCount,
   resetCount,
+  emptyCart,
 }) => {
   return (
     <StyledHeader>
@@ -28,6 +29,7 @@ const Header = ({
             incrementCount={incrementCount}
             decrementCount={decrementCount}
             resetCount={resetCount}
+            emptyCart={emptyCart}
           />
         )}
       </StyledNavbar>

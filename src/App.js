@@ -25,7 +25,7 @@ const theme = {
 function App() {
 
   const initialState = {
-    displayCart: true,
+    displayCart: false,
     loading: true,
     error: false,
     products: [],
@@ -70,6 +70,12 @@ function App() {
     })
   }
 
+  const emptyCart = () => {
+    dispatch({
+      type: ACTIONS.EMPTY_CART
+    })
+  }
+
   return (
     <ThemeProvider theme={theme} >
       <AppContainer>
@@ -82,6 +88,7 @@ function App() {
             incrementCount={incrementCount}
             decrementCount={decrementCount}
             resetCount={resetCount}
+            emptyCart={emptyCart}
           />
           <Routes>
             <Route path="/" element={<Home />} />

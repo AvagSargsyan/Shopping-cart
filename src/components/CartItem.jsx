@@ -4,12 +4,18 @@ import { StyledCountButton } from '../pages/styles/ProductDetails.style';
 import shortenText from '../utilities/shortenText';
 import { StyledCartItem } from './styles/CartItem.style';
 
-const CartItem = ({ product, incrementCount, decrementCount, resetCount }) => {
+const CartItem = ({
+  product,
+  incrementCount,
+  decrementCount,
+  resetCount,
+  toggleCart,
+}) => {
   return (
     <StyledCartItem>
       <img src={product.image} alt={product.title} />
       <div>
-        <Link to={`/products/${product.id}`}>
+        <Link to={`/products/${product.id}`} onClick={toggleCart}>
           {shortenText(product.title, 47)}
         </Link>
         <p>${product.totalPrice}</p>
