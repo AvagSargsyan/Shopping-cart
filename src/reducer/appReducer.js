@@ -40,8 +40,8 @@ const reducer = (state, action) => {
       products: state.products.map(product => product.id === action.payload.id ? {
         ...product,
         count: product.count + 1,
-        totalPrice: (product.price * (product.count + 1)).toFixed(2)
-      } : product)
+        totalPrice: Number.parseFloat((product.price * (product.count + 1)).toFixed(2))
+      } : product),
     }
   } else if (action.type === ACTIONS.DECREMENT_COUNT) {
     return {
@@ -49,7 +49,7 @@ const reducer = (state, action) => {
       products: state.products.map(product => product.id === action.payload.id ? {
         ...product,
         count: product.count > 0 ? product.count - 1 : 0,
-        totalPrice: product.count > 0 ? (product.price * (product.count - 1)).toFixed(2) : 0,
+        totalPrice: product.count > 0 ? Number.parseFloat((product.price * (product.count - 1)).toFixed(2)) : 0,
       } : product)
     }
   } else if (action.type === ACTIONS.RESET_COUNT) {
@@ -58,7 +58,7 @@ const reducer = (state, action) => {
       products: state.products.map(product => product.id === action.payload.id ? {
         ...product,
         count: action.payload.newCount,
-        totalPrice: (product.price * (product.count - 1)).toFixed(2)
+        totalPrice: Number.parseFloat((product.price * (product.count - 1)).toFixed(2))
       } : product)
     }
   }

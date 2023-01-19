@@ -29,6 +29,7 @@ function App() {
     loading: true,
     error: false,
     products: [],
+    totalCartPrice: 0
   }
 
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -74,7 +75,14 @@ function App() {
       <AppContainer>
         <Router>
           <GlobalStyles />
-          <Header displayCart={state.displayCart} products={state.products} toggleCart={toggleCart} incrementCount={incrementCount} decrementCount={decrementCount} resetCount={resetCount} />
+          <Header
+            displayCart={state.displayCart}
+            products={state.products}
+            toggleCart={toggleCart}
+            incrementCount={incrementCount}
+            decrementCount={decrementCount}
+            resetCount={resetCount}
+          />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
