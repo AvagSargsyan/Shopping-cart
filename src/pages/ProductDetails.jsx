@@ -67,7 +67,12 @@ const ProductDetails = () => {
           </StyledProduct>
         </StyledProductDetails>
       )}
-      {error && <div>Something went wrong! Please reload the page.</div>}
+      {error && (
+        <div>
+          Something went wrong! Please check your internet connection and reload
+          the page.
+        </div>
+      )}
     </StyledProductDetails>
   );
 };

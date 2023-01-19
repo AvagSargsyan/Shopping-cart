@@ -59,12 +59,22 @@ function App() {
     });
   }
 
+  const resetCount = (productId, newCount) => {
+    dispatch({
+      type: ACTIONS.RESET_COUNT,
+      payload: {
+        id: productId,
+        newCount: newCount
+      }
+    })
+  }
+
   return (
     <ThemeProvider theme={theme} >
       <AppContainer>
         <Router>
           <GlobalStyles />
-          <Header displayCart={state.displayCart} products={state.products} toggleCart={toggleCart} incrementCount={incrementCount} decrementCount={decrementCount} />
+          <Header displayCart={state.displayCart} products={state.products} toggleCart={toggleCart} incrementCount={incrementCount} decrementCount={decrementCount} resetCount={resetCount} />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />

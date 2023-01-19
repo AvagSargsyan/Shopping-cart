@@ -1,3 +1,9 @@
+// Function API:
+// interface filterProducts {
+//   (products: array): array;
+// }
+// 
+
 const filterProducts = (products) => {
   return products.filter(
     (product) =>

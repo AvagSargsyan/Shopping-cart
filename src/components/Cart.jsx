@@ -8,7 +8,13 @@ import {
 } from './styles/Cart.style';
 import { StyledButton } from './styles/ProductCard.style';
 
-const Cart = ({ products, toggleCart, incrementCount, decrementCount }) => {
+const Cart = ({
+  products,
+  toggleCart,
+  incrementCount,
+  decrementCount,
+  resetCount,
+}) => {
   let cartItems = products.filter((product) => product.count > 0);
 
   return (
@@ -25,6 +31,7 @@ const Cart = ({ products, toggleCart, incrementCount, decrementCount }) => {
               product={item}
               incrementCount={incrementCount}
               decrementCount={decrementCount}
+              resetCount={resetCount}
             />
           ))
         ) : (

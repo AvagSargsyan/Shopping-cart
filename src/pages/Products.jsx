@@ -18,7 +18,12 @@ const Products = ({ incrementCount, products, loading, error }) => {
             product={product}
           />
         ))}
-      {error && <div>Something went wrong! Please reload the page.</div>}
+      {error && (
+        <div>
+          Something went wrong! Please check your internet connection and reload
+          the page.
+        </div>
+      )}
     </StyledProducts>
   );
 };

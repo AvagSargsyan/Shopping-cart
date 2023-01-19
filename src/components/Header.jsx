@@ -9,6 +9,7 @@ const Header = ({
   toggleCart,
   incrementCount,
   decrementCount,
+  resetCount,
 }) => {
   return (
     <StyledHeader>
@@ -26,6 +27,7 @@ const Header = ({
             toggleCart={toggleCart}
             incrementCount={incrementCount}
             decrementCount={decrementCount}
+            resetCount={resetCount}
           />
         )}
       </StyledNavbar>
