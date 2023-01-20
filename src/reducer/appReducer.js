@@ -8,7 +8,8 @@ const ACTIONS = {
   INCREMENT_COUNT: 'increment_count',
   DECREMENT_COUNT: 'decrement_count',
   RESET_COUNT: 'reset_count',
-  EMPTY_CART: 'empty_cart'
+  EMPTY_CART: 'empty_cart',
+  ADD_COUNT: 'add_count'
 }
 
 const reducer = (state, action) => {
@@ -59,7 +60,16 @@ const reducer = (state, action) => {
       products: state.products.map(product => product.id === action.payload.id ? {
         ...product,
         count: action.payload.newCount,
-        totalPrice: Number.parseFloat((product.price * (product.count - 1)).toFixed(2))
+        totalPrice: Number.parseFloat((product.price * (action.payload.newCount)).toFixed(2))
+      } : product)
+    }
+  } else if (action.type === ACTIONS.ADD_COUNT) {
+    return {
+      ...state,
+      products: state.products.map(product => product.id === action.payload.id ? {
+        ...product,
+        count: product.count + action.payload.newCount,
+        totalPrice: Number.parseFloat((product.price * (product.count + action.payload.newCount)).toFixed(2))
       } : product)
     }
   } else if (action.type === ACTIONS.EMPTY_CART) {

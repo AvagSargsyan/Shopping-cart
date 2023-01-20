@@ -31,8 +31,10 @@ const StyledCartItem = styled.div`
       flex-direction: row;
       align-items: center;
       gap: 0.9rem;
-
+      
       span {
+        width: 2.8vw;
+        text-align: center;
         font-weight: 600;
         font-size: 1.6rem;
       }

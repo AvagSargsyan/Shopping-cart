@@ -15,8 +15,9 @@ import {
 import { FaShoppingCart, FaPlus, FaMinus } from 'react-icons/fa';
 import { StyledButton } from '../components/styles/ProductCard.style';
 import Loader from '../components/Loader';
+import { useState } from 'react';
 
-const ProductDetails = () => {
+const ProductDetails = ({ addCount }) => {
   const { id } = useParams();
   let navigate = useNavigate();
 
@@ -26,9 +27,19 @@ const ProductDetails = () => {
     error,
   } = useFetch(`https://fakestoreapi.com/products/${id}`);
 
+  const [localItemCount, setLocatItemCount] = useState(0);
+
   if (error) {
     console.log(error);
   }
+
+  const incrementLocalCount = () => {
+    setLocatItemCount((prevCount) => prevCount + 1);
+  };
+
+  const decrementLocalCount = () => {
+    setLocatItemCount((prevCount) => (prevCount > 0 ? prevCount - 1 : 0));
+  };
 
   return (
     <StyledProductDetails>
@@ -51,14 +62,21 @@ const ProductDetails = () => {
                 </StyledOldPrice>
               </StyledPriceSection>
               <StyledAddSection>
-                <StyledCountButton>
+                <StyledCountButton onClick={decrementLocalCount}>
                   <FaMinus />
                 </StyledCountButton>
-                <span>0</span>
-                <StyledCountButton>
+                <span>{localItemCount}</span>
+                <StyledCountButton onClick={incrementLocalCount}>
                   <FaPlus />
                 </StyledCountButton>
-                <StyledAddButton>
+                <StyledAddButton
+                  onClick={() => {
+                    if (localItemCount > 0) {
+                      addCount(product.id, localItemCount);
+                      setLocatItemCount(0);
+                    }
+                  }}
+                >
                   <FaShoppingCart />
                   Add to cart
                 </StyledAddButton>

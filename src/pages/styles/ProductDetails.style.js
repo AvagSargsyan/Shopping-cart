@@ -75,12 +75,15 @@ const StyledOldPrice = styled.div`
 `
 
 const StyledAddSection = styled.div`
+  position: relative;
   margin-top: 8vh;
   display: flex;
   align-items: center;
   gap: 2rem;
   
   span {
+    text-align: center;
+    width: 5vw;
     font-size: 1.8rem;
     font-weight: 600;
   }

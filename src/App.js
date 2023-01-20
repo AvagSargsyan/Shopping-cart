@@ -70,6 +70,16 @@ function App() {
     })
   }
 
+  const addCount = (productId, newCount) => {
+    dispatch({
+      type: ACTIONS.ADD_COUNT,
+      payload: {
+        id: productId,
+        newCount: newCount
+      }
+    })
+  }
+
   const emptyCart = () => {
     dispatch({
       type: ACTIONS.EMPTY_CART
@@ -99,7 +109,7 @@ function App() {
               loading={state.loading}
               error={state.error} />}
             />
-            <Route path="/products/:id" element={<ProductDetails />} />
+            <Route path="/products/:id" element={<ProductDetails addCount={addCount} />} />
             <Route path="*" element={<Error />} />
           </Routes>
         </Router>
