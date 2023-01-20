@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import Cart from './Cart';
 import CartButton from './CartButton';
-import { StyledHeader, StyledNavbar } from './styles/Header.style';
+import { StyledCover, StyledHeader, StyledNavbar } from './styles/Header.style';
 
 const Header = ({
   displayCart,
@@ -27,14 +27,17 @@ const Header = ({
         <Link to="/about">About</Link>
         <CartButton toggleCart={toggleCart} itemsCount={itemsCount} />
         {displayCart && (
-          <Cart
-            cartItems={cartItems}
-            toggleCart={toggleCart}
-            incrementCount={incrementCount}
-            decrementCount={decrementCount}
-            resetCount={resetCount}
-            emptyCart={emptyCart}
-          />
+          <>
+            <Cart
+              cartItems={cartItems}
+              toggleCart={toggleCart}
+              incrementCount={incrementCount}
+              decrementCount={decrementCount}
+              resetCount={resetCount}
+              emptyCart={emptyCart}
+            />
+            <StyledCover onClick={toggleCart}></StyledCover>
+          </>
         )}
       </StyledNavbar>
     </StyledHeader>

@@ -34,7 +34,20 @@ const StyledNavbar = styled.nav`
   }
 `
 
+const StyledCover = styled.div`
+  position: absolute;
+  z-index: 4;
+  left: 0;
+  top: 0;
+  background: ${({ theme }) => theme.colors.dark};
+  opacity: 0.6;
+  height: 100vh;
+  width: 100%;
+  animation: fade 0.3s ease-in-out;
+`
+
 export {
   StyledHeader,
-  StyledNavbar
+  StyledNavbar,
+  StyledCover
 }

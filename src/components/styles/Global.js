@@ -50,6 +50,27 @@ const GlobalStyles = createGlobalStyle`
       opacity: 1;
     }
   }
+
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 0.6;
+    }
+  }
+
+  @keyframes cover {
+    from {
+      transform: translate(100%);
+      opacity: 0.5;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
 `
 
 export default GlobalStyles;
