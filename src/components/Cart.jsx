@@ -9,14 +9,13 @@ import {
 import { StyledButton } from './styles/ProductCard.style';
 
 const Cart = ({
-  products,
+  cartItems,
   toggleCart,
   incrementCount,
   decrementCount,
   resetCount,
   emptyCart,
 }) => {
-  const cartItems = products.filter((product) => product.count > 0);
   const totalCartPrice = cartItems.reduce(
     (acc, item) => acc + item.totalPrice,
     0

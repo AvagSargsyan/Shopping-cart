@@ -21,7 +21,6 @@ const StyledCart = styled.div`
     font-size: 2rem;
     text-align: center;
   }
-  
 `
 
 const StyledItemsSection = styled.div`

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const StyledCartButton = styled.button`
+  position: relative;
   color: ${({ theme }) => theme.colors.dark};
   background: ${({ theme }) => theme.colors.light};
   border: none;
@@ -12,6 +13,25 @@ const StyledCartButton = styled.button`
   justify-content: center;
   cursor: pointer;
   transition: 0.1s ease-in-out;
+  animation: grow 0.8s;
+
+  div {
+    position: absolute;
+    bottom: -0.4rem;
+    left: -0.4rem;
+
+    background: ${({ theme }) => theme.colors.primary};
+    border-radius: 50%;
+    padding: 0 0.4rem 0.1rem 0.4rem;
+    min-width: 1.8rem;
+    max-width: 2.2rem;
+    animation: grow 0.2s;
+    
+    span {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+  }
 
   &:hover {
     background: ${({ theme }) => theme.colors.darkerLight};

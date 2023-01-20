@@ -12,6 +12,10 @@ const Header = ({
   resetCount,
   emptyCart,
 }) => {
+  const cartItems = products.filter((product) => product.count > 0);
+
+  const itemsCount = cartItems.reduce((acc, item) => acc + item.count, 0);
+
   return (
     <StyledHeader>
       <h1>
@@ -21,10 +25,10 @@ const Header = ({
         <Link to="/">Home</Link>
         <Link to="/products">Products</Link>
         <Link to="/about">About</Link>
-        <CartButton toggleCart={toggleCart} />
+        <CartButton toggleCart={toggleCart} itemsCount={itemsCount} />
         {displayCart && (
           <Cart
-            products={products}
+            cartItems={cartItems}
             toggleCart={toggleCart}
             incrementCount={incrementCount}
             decrementCount={decrementCount}
