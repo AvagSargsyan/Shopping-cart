@@ -14,7 +14,7 @@ const StyledCart = styled.div`
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   gap: 1rem;
-  animation: cover 0.3s;
+  animation: cover 0.4s;
   
   h2 {
     color: ${({ theme }) => theme.colors.dark};

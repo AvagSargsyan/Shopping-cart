@@ -47,6 +47,29 @@ const StyledHome = styled.div`
       background: ${({ theme }) => theme.colors.lighterDark};
     }
   }
+  @media screen and (max-width: 768px) {
+    max-height: 85%;
+    background-position: bottom;
+    align-items: center;
+    text-align: center;
+    
+    p {
+      display: none;
+    }
+
+    h2 {
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      background-color: rgba(0, 0, 0, 0.6);
+      width: 100%;
+      font-size: 3.2rem;
+    }
+
+    a {
+      font-size: 1.1rem;
+    }
+  }
 `
 
 export {

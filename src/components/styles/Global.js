@@ -8,6 +8,7 @@ const GlobalStyles = createGlobalStyle`
   }
   
   body {
+    min-width: 320px;
     color: ${({ theme }) => theme.colors.font};
     background: ${({ theme }) => theme.colors.light};
     font-family: 'Montserrat', sans-serif;

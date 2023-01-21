@@ -15,6 +15,11 @@ const StyledHeader = styled.header`
       color: ${({ theme }) => theme.colors.primary};
     }
   }
+  
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    max-height: 15%;
+  }
 `
 
 const StyledNavbar = styled.nav`
@@ -32,6 +37,15 @@ const StyledNavbar = styled.nav`
       color: ${({ theme }) => theme.colors.darkerLight};
     }
   }
+
+  @media screen and (max-width: 768px) {
+    width: 90%;
+    justify-content: space-around;
+    
+    a {
+      font-size: 1.1rem;
+    }
+  }
 `
 
 const StyledCover = styled.div`
@@ -43,7 +57,7 @@ const StyledCover = styled.div`
   opacity: 0.6;
   height: 100vh;
   width: 100%;
-  animation: fade 0.3s ease-in-out;
+  animation: fade 0.4s ease-in-out;
 `
 
 export {
