@@ -10,6 +10,10 @@ const StyledProducts = styled.div`
   gap: 5rem;
   justify-items: center;
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+
+  @media screen and (max-width: 768px) {
+    padding: 10vh 6vw;
+  }
 `
 
 export {

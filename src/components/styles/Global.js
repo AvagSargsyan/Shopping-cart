@@ -19,10 +19,23 @@ const GlobalStyles = createGlobalStyle`
   }
 
   /* Animations */
+
   @keyframes grow {
     from {
       opacity: 0;
       transform: scale(0.8);
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Safari */
+  @-webkit-keyframes grow {
+    from {
+      opacity: 0;
+      -webkit-transform: scale(0.8);
     }
 
     to {
@@ -41,9 +54,33 @@ const GlobalStyles = createGlobalStyle`
     }
   }
 
+  /* Safari */
+  @-webkit-keyframes fade-right {
+    from {
+      -webkit-transform: translateX(-10px);
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
   @keyframes fade-left {
     from {
       transform: translateX(10px);
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Safari */
+  @-webkit-keyframes fade-left {
+    from {
+      -webkit-transform: translateX(10px);
       opacity: 0;
     }
 
@@ -65,6 +102,18 @@ const GlobalStyles = createGlobalStyle`
   @keyframes cover {
     from {
       transform: translate(100%);
+      opacity: 0.5;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Safari */
+  @-webkit-keyframes cover {
+    from {
+      -webkit-transform: translate(100%);
       opacity: 0.5;
     }
 

@@ -8,7 +8,7 @@ const useProductsData = (url, dispatch) => {
         try {
           const response = await fetch(url);
           const data = await response.json();
-          console.log(data);
+          // console.log(data);
           dispatch({ type: ACTIONS.FETCH_SUCCESS, payload: data });
         } catch (err) {
           dispatch({

@@ -4,6 +4,10 @@ const StyledProductDetails = styled.div`
   background: ${({ theme }) => theme.colors.darkerLight};
   color: ${({ theme }) => theme.colors.dark};
   padding: 0.8rem;
+
+  @media screen and (max-width: 768px) {
+    min-width: 300px;
+  }
   
   button {
     animation: grow 0.6s;
@@ -21,16 +25,26 @@ const StyledProduct = styled.div`
   animation: fade-left 0.6s;
 
   img {
-    width: 30vw;
-    min-width: 300px;
+    width: 35vw;
+    min-width: 340px;
     max-width: 450px;
     height: auto;
     border-radius: 8px;
     animation: fade-right 0.6s;
+
+    @media screen and (max-width: 768px) {
+      width: 90vw;
+      min-width: 250px;
+      max-width: 400px;
+    }
   }
 
   h2 {
     font-size: 2.3rem;
+
+    @media screen and (max-width: 768px) {
+      font-size: 2rem;
+    }
   }
 
   p {
@@ -46,6 +60,12 @@ const StyledInfo = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  @media screen and (max-width: 768px) {
+    width: 95vw;
+    min-width: 280px;
+  }
+  
 `
 const StyledCategory = styled.div`
   color: ${({ theme }) => theme.colors.primary};
@@ -78,7 +98,9 @@ const StyledAddSection = styled.div`
   position: relative;
   margin-top: 8vh;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 2rem;
   
   span {

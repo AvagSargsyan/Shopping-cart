@@ -33,10 +33,14 @@ const StyledCartItem = styled.div`
       gap: 0.9rem;
       
       span {
-        width: 2.8vw;
+        width: 3.2vw;
         text-align: center;
         font-weight: 600;
-        font-size: 1.6rem;
+        font-size: 1.4rem;
+
+        @media screen and (max-width: 768px) {
+          width: 6vw;
+        }
       }
     }
   }
@@ -46,7 +50,7 @@ const StyledCartItem = styled.div`
     align-self: center;
     width: 95%;
     max-width: 100px;
-    min-width: 50px;
+    min-width: 80px;
   }
 
   a {
@@ -57,6 +61,11 @@ const StyledCartItem = styled.div`
 
     &:hover {
       color: ${({ theme }) => theme.colors.lighterDark};
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 1rem;
+      font-weight: 600;
     }
   }
 

@@ -49,7 +49,7 @@ const StyledNavbar = styled.nav`
 `
 
 const StyledCover = styled.div`
-  position: absolute;
+  position: fixed;
   z-index: 4;
   left: 0;
   top: 0;

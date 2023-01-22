@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledCart = styled.div`
-  width: 38%;
+  width: 45%;
   height: 100vh;
   padding: 1rem;
   background: #fff;
@@ -15,12 +15,21 @@ const StyledCart = styled.div`
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   gap: 1rem;
   animation: cover 0.4s;
+
+  @media screen and (max-width: 768px) {
+    width: 90%;
+    min-width: 320px;
+  }
   
   h2 {
     color: ${({ theme }) => theme.colors.dark};
     margin-bottom: 1rem;
     font-size: 2rem;
     text-align: center;
+
+    @media screen and (max-width: 768px) {
+      font-size: 1.8rem;
+    }
   }
 `
 

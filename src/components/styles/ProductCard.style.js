@@ -17,6 +17,11 @@ const StyledProductCard = styled.div`
   gap: 0.8rem;
   animation: grow 0.6s;
 
+  @media screen and (max-width: 768px) {
+    padding: 1rem;
+    width: 100%;
+  }
+
   &:hover {
     transform: scale(1.1);
   }
@@ -24,8 +29,12 @@ const StyledProductCard = styled.div`
   img {
     align-self: center;
     width: 95%;
-    max-width: 280px;
+    max-width: 250px;
     min-width: 150px;
+
+    @media screen and (max-width: 768px) {
+      max-width: 200px;
+    }
   }
 
   a {

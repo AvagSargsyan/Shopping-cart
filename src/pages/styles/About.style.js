@@ -9,6 +9,10 @@ const StyledAbout = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+
+  @media screen and (max-width: 768px) {
+    height: 85%;
+  }
   
   div {
     border-radius: 8px;
@@ -19,17 +23,30 @@ const StyledAbout = styled.div`
     animation: fold;
     transition: 0.4s ease-in-out;
     animation: grow 0.7s;
+
+    @media screen and (max-width: 768px) {
+      width: 90%;
+      
+    }
     
     h2 {
       font-size: 3.5rem;
       margin-bottom: 2rem;
+
+      @media screen and (max-width: 768px) {
+        font-size: 3.2rem;
+      }
     }
     
     p {
       font-size: 1.4rem;
       line-height: 1.8rem;
       letter-spacing: 2px;
-      font-weight: 600;
+
+      @media screen and (max-width: 768px) {
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+      }
     }
 
     &:hover {

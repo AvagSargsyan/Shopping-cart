@@ -15,6 +15,10 @@ const StyledCartButton = styled.button`
   transition: 0.1s ease-in-out;
   animation: grow 0.8s;
 
+  @media screen and (max-width: 768px) {
+    padding: 0.7rem 0.8rem;
+  }
+
   div {
     position: absolute;
     bottom: -0.4rem;
