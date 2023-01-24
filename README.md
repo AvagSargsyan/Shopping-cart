@@ -1,3 +1,57 @@
+# Shopping-cart
+
+A shopping cart app. You can:
+
+- browse products
+- add them to the cart
+- change the quantity of products
+- remove products from the cart
+- empty cart
+- see product details on a different page
+- interact with cart from every page
+
+##
+
+Desktop
+![Shopping cart](./src/assets/screenshots/desktop_1.png)
+![Shopping cart](./src/assets/screenshots/desktop_2.png)
+![Shopping cart](./src/assets/screenshots/desktop_3.png)
+![Shopping cart](./src/assets/screenshots/desktop_4.png)
+
+##
+
+Mobile
+![Shopping cart](./src/assets/screenshots/mobile_1.png)
+![Shopping cart](./src/assets/screenshots/mobile_2.png)
+![Shopping cart](./src/assets/screenshots/mobile_3.png)
+![Shopping cart](./src/assets/screenshots/mobile_4.png)
+![Shopping cart](./src/assets/screenshots/mobile_5.png)
+
+## Links
+
+You can visit the website by following this [link](https://avagsargsyan.github.io/Shopping-cart).
+
+## Built with
+
+- [React](https://reactjs.org/)
+- [styled-components](https://styled-components.com/)
+- [Fake Store API](https://fakestoreapi.com/docs)
+
+## Authors
+
+This project is designed and created by [me](https://github.com/AvagSargsyan) during [The Odin Project](https://www.theodinproject.com/) Full stack developer curriculum.
+
+## Credits
+
+The icons used in this project are from [Font awesome](https://react-icons.github.io/react-icons/icons?name=fa).
+The home and about pages' background images are from [unsplash](https://unsplash.com/):
+home page background image by: [NordWood Themes](https://unsplash.com/@nordwood).
+about page background image by: [Amanda Vick](https://unsplash.com/@amandavickcreative).
+
+##
+
+This project is created for only educative purposes and shouldn't be used for other intentions.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
