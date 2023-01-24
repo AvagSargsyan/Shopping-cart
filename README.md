@@ -58,7 +58,7 @@ about page background image by: [Amanda Vick](https://unsplash.com/@amandavickcr
 
 ##
 
-This project is created for only educative purposes and shouldn't be used for other intentions.
+This project is created for educational purposes only and shouldn't be used for other intentions.
 
 # Getting Started with Create React App
 
