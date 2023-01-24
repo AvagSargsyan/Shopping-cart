@@ -15,7 +15,7 @@ const CartItem = ({
     <StyledCartItem>
       <img src={product.image} alt={product.title} />
       <div>
-        <Link to={`/products/${product.id}`} onClick={toggleCart}>
+        <Link to={`/Shopping-cart/products/${product.id}`} onClick={toggleCart}>
           {shortenText(product.title, 47)}
         </Link>
         <p>${product.totalPrice}</p>
