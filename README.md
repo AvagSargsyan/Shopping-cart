@@ -1,6 +1,7 @@
 # Shopping-cart
 
 A shopping cart app. You can:
+wh
 
 - browse products
 - add them to the cart
@@ -13,19 +14,23 @@ A shopping cart app. You can:
 ##
 
 Desktop
+
+##
+
 ![Shopping cart](./src/assets/screenshots/desktop_1.png)
 ![Shopping cart](./src/assets/screenshots/desktop_2.png)
 ![Shopping cart](./src/assets/screenshots/desktop_3.png)
-![Shopping cart](./src/assets/screenshots/desktop_4.png)
 
 ##
 
 Mobile
+
+##
+
 ![Shopping cart](./src/assets/screenshots/mobile_1.png)
 ![Shopping cart](./src/assets/screenshots/mobile_2.png)
 ![Shopping cart](./src/assets/screenshots/mobile_3.png)
 ![Shopping cart](./src/assets/screenshots/mobile_4.png)
-![Shopping cart](./src/assets/screenshots/mobile_5.png)
 
 ## Links
 
@@ -44,8 +49,11 @@ This project is designed and created by [me](https://github.com/AvagSargsyan) du
 ## Credits
 
 The icons used in this project are from [Font awesome](https://react-icons.github.io/react-icons/icons?name=fa).
-The home and about pages' background images are from [unsplash](https://unsplash.com/):
+<br />
+The two background images are from [unsplash](https://unsplash.com/):
+<br />
 home page background image by: [NordWood Themes](https://unsplash.com/@nordwood).
+<br />
 about page background image by: [Amanda Vick](https://unsplash.com/@amandavickcreative).
 
 ##
