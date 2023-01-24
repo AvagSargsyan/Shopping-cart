@@ -5,7 +5,7 @@ const ProductCard = ({ incrementCount, product }) => {
   return (
     <StyledProductCard>
       <img src={product.image} alt={product.title} />
-      <Link to={`/shopping-cart/products/${product.id}`}>{product.title}</Link>
+      <Link to={`/Shopping-cart/products/${product.id}`}>{product.title}</Link>
       <div>${product.price}</div>
       <StyledButton onClick={() => incrementCount(product.id)}>
         Add to cart

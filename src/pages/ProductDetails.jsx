@@ -46,7 +46,7 @@ const ProductDetails = ({ addCount }) => {
       {loading && <Loader />}
       {product && (
         <StyledProductDetails>
-          <StyledButton onClick={() => navigate('/shopping-cart/products')}>
+          <StyledButton onClick={() => navigate('/Shopping-cart/products')}>
             Go back
           </StyledButton>
           <StyledProduct>

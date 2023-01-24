@@ -101,15 +101,15 @@ function App() {
             emptyCart={emptyCart}
           />
           <Routes>
-            <Route path="/shopping-cart/" element={<Home />} />
-            <Route path="/shopping-cart/about" element={<About />} />
-            <Route path="/shopping-cart/products" element={<Products
+            <Route path="/Shopping-cart/" element={<Home />} />
+            <Route path="/Shopping-cart/about" element={<About />} />
+            <Route path="/Shopping-cart/products" element={<Products
               incrementCount={incrementCount}
               products={state.products}
               loading={state.loading}
               error={state.error} />}
             />
-            <Route path="/shopping-cart/products/:id" element={<ProductDetails addCount={addCount} />} />
+            <Route path="/Shopping-cart/products/:id" element={<ProductDetails addCount={addCount} />} />
             <Route path="*" element={<Error />} />
           </Routes>
         </Router>
