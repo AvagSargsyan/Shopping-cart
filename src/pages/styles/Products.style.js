@@ -11,8 +11,9 @@ const StyledProducts = styled.div`
   justify-items: center;
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
 
-  @media screen and (max-width: 768px) {
-    padding: 10vh 6vw;
+  @media screen and (max-width: 948px) {
+    padding: 10vh 7vw;
+    gap: 4rem;
   }
 `
 

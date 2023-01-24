@@ -6,7 +6,7 @@ const Home = () => {
     <StyledHome>
       <p>Best online store of the year</p>
       <h2>Make your fashion look more attractive</h2>
-      <Link to="/products">Shop now</Link>
+      <Link to="/shopping-cart/products">Shop now</Link>
     </StyledHome>
   );
 };

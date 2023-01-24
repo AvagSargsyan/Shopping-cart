@@ -1,7 +1,6 @@
 # Shopping-cart
 
 A shopping cart app. You can:
-wh
 
 - browse products
 - add them to the cart

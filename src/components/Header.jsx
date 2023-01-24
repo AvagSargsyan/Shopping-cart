@@ -19,12 +19,12 @@ const Header = ({
   return (
     <StyledHeader>
       <h1>
-        <Link to="/">FakeStore</Link>
+        <Link to="/shopping-cart/">FakeStore</Link>
       </h1>
       <StyledNavbar>
-        <Link to="/">Home</Link>
-        <Link to="/products">Products</Link>
-        <Link to="/about">About</Link>
+        <Link to="/shopping-cart/">Home</Link>
+        <Link to="/shopping-cart/products">Products</Link>
+        <Link to="/shopping-cart/about">About</Link>
         <CartButton toggleCart={toggleCart} itemsCount={itemsCount} />
         {displayCart && (
           <>

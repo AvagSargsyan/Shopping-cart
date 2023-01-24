@@ -29,7 +29,7 @@ const StyledProductCard = styled.div`
   img {
     align-self: center;
     width: 95%;
-    max-width: 250px;
+    max-width: 230px;
     min-width: 150px;
 
     @media screen and (max-width: 768px) {
