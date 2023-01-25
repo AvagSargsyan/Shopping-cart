@@ -28,8 +28,6 @@ Mobile
 
 ![Shopping cart](./src/assets/screenshots/mobile_1.png)
 ![Shopping cart](./src/assets/screenshots/mobile_2.png)
-![Shopping cart](./src/assets/screenshots/mobile_3.png)
-![Shopping cart](./src/assets/screenshots/mobile_4.png)
 
 ## Links
 
