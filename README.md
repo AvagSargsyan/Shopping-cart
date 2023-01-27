@@ -14,7 +14,7 @@ A shopping cart app. You can:
 
 Desktop
 
-##
+<br>
 
 ![Shopping cart](./src/assets/screenshots/desktop_1.png)
 ![Shopping cart](./src/assets/screenshots/desktop_2.png)
@@ -24,7 +24,7 @@ Desktop
 
 Mobile
 
-##
+<br>
 
 ![Shopping cart](./src/assets/screenshots/mobile_1.png)
 ![Shopping cart](./src/assets/screenshots/mobile_2.png)
